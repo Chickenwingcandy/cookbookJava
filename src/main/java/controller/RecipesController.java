@@ -23,8 +23,8 @@ public class RecipesController {
     }
 
     @CrossOrigin
-    @PathVariable(value = "/createRecipe", method = RequestMethod.POST)
-    public RecipesModels createRecipe(@RequestParam String recipeTitle, @RequestParam String recipeBody,@RequestParam ArrayList<String> ingredients){
+    @RequestMapping(value = "/create/{Recipe}", method = RequestMethod.POST)
+    public RecipesModels createRecipe(@RequestParam String recipeTitle, @RequestParam String recipeBody, @RequestParam ArrayList<String> ingredients){
         RecipesModels recipesModels = new RecipesModels();
         recipesModels.setRecipeTitle();
 
