@@ -27,7 +27,8 @@ public class RecipesController {
     public RecipesModels createRecipe(@RequestParam String recipeTitle, @RequestParam String recipeBody, @RequestParam ArrayList<String> ingredients){
         RecipesModels recipesModels = new RecipesModels();
         recipesModels.setRecipeTitle();
-
+        recipesModels.setRecipeBody();
+        recipesModels.getIngredients();
         return recipesModels;
     }
 }
